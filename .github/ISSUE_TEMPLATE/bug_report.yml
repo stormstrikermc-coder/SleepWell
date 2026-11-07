@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a reproducible problem with SleepWell.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Never include passwords, tokens, public player IPs, or other private information."
+  - type: input
+    id: plugin_version
+    attributes:
+      label: SleepWell version
+      placeholder: "Release version"
+    validations:
+      required: true
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: Minecraft version
+    validations:
+      required: true
+  - type: dropdown
+    id: server_software
+    attributes:
+      label: Server software
+      options:
+        - Bukkit
+        - Paper
+        - Spigot
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide clear, numbered steps.
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Remove IP addresses, tokens, and other private information before posting.
+      render: text
+    validations:
+      required: false
